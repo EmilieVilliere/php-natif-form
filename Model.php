@@ -21,7 +21,7 @@ function setMovie($data) {
     $bdd = getBdd();
 
     $req = $bdd->prepare("INSERT INTO t_movies (m_title, m_category, m_duree, m_real, m_actors, m_year, m_studio, m_grade, m_image, m_actif) 
-                                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, '1')");
+                                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $req->execute($data);
 
 }

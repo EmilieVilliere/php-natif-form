@@ -32,7 +32,7 @@ foreach($movies as $movie) : ?>
 
         <hr>
         <div id="form-movie">
-            <form action="movie.php" method="post">
+            <form action="movie.php" method="post" enctype="multipart/form-data">
 
                 <label for="m_title">Titre du film</label><br>
                 <input class="form-items" type="text" name="m_title" id="m_title">
@@ -70,11 +70,18 @@ foreach($movies as $movie) : ?>
                 <br>
 
                 <label for="m_grade">Note du film :</label><br>
-                <input class="form-items" type="range" name="m_grade" id="m_grade" min="0" max="5">
+                <select name="m_grade" id="m_grade" class="form-items">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
                 <br>
 
                 <label for="m_image">Titre de l'affiche:</label><br>
-                <input class="form-items" type="text" name="m_image" id="m_image">
+                <input class="form-items" type="file" name="m_image" id="m_image">
                 <br>
 
                 <button type="submit" class="form-items"> go !</button>
