@@ -10,7 +10,7 @@ foreach($movies as $movie) : ?>
 
         <h2> <?= $movie['m_title'] ?> </h2>
         <div class="mt-3">
-            <p> <?= $movie['m_category'] . ' - ' . $movie['m_duree'] ?> </p>
+            <p> <?= $movie['m_category'] . ' - ' . $movie['m_duree'] ?> minutes. </p>
             <span> <?= $movie['m_real'] ?> </span>
 
             <ul>
@@ -81,7 +81,7 @@ foreach($movies as $movie) : ?>
                 <br>
 
                 <label for="m_image">Titre de l'affiche:</label><br>
-                <input class="form-items" type="file" name="m_image" id="m_image">
+                <input class="form-items" type="file" name="m_image" id="m_image" accept="image/png, image/jpeg, text/pdf application/pdf>
                 <br>
 
                 <button type="submit" class="form-items"> go !</button>
